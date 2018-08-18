@@ -314,7 +314,7 @@ do ->
     .on 'resourceState', (state) -> loadingState = state
 
     .on 'startPresentation', ->
-      new Notification('Press escape key to exit presentation mode.')
+      new Notification('Press escape key to exit presentation mode.', {silent: true});
       $('#md-pane').addClass('presentation')
       $('#footer').addClass('presentation')
       $('#pane-splitter-right').addClass('presentation')
