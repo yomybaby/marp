@@ -317,11 +317,13 @@ do ->
       new Notification('Press escape key to exit presentation mode.')
       $('#md-pane').addClass('presentation')
       $('#footer').addClass('presentation')
+      $('#pane-splitter-right').addClass('presentation')
       MdsRenderer.sendToMain 'startPresentation'
 
     .on 'exitPresentation', ->
       $('#md-pane').removeClass('presentation')
       $('#footer').removeClass('presentation')
+      $('#pane-splitter-right').removeClass('presentation')
 
     .on 'jumpSlide', (forwards) -> editorStates.navigateSlide {}, {}, forwards
 
